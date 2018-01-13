@@ -1,5 +1,4 @@
 <%= form_for(task) do |f| %>
-
  <% if task.errors.any? %>
     <div id="error_explanation">
       <ul>
@@ -9,9 +8,11 @@
       </ul>
     </div>
   <% end %>
-
-
-  <%= f.label :content, 'メッセージ' %>
+  
+  <%= f.label :status, 'ステータス' %>
+  <%= f.text_field :status %>
+  
+  <%= f.label :content, 'タスク' %>
   <%= f.text_field :content %>
 
   <%= f.submit '投稿' %>
